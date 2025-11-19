@@ -1,0 +1,89 @@
+package date_tool
+//
+//import (
+//	"fmt"
+//	"regexp"
+//	"strings"
+//)
+//
+//
+//type FileInfo struct {
+//	Date     string
+//	Filename string
+//	FullName string
+//	Ext      string
+//}
+//func test() {
+//	testCases := []string{
+//		"8.1  文件名.xlsx",
+//		"8.15 报关数据表.xlsx",
+//		"12.25圣诞节数据.xlsx",
+//		"8.1文件名.xlsx", // 没有空格的情况
+//		"文件名.xlsx",    // 没有日期的情况
+//	}
+//
+//	for _, testCase := range testCases {
+//		info := extractFileInfo(testCase)
+//		fmt.Printf("原始: %s\n", testCase)
+//		fmt.Printf("日期: '%s', 文件名: '%s', 扩展名: '%s'\n",
+//			info.Date, info.Filename, info.Ext)
+//		fmt.Println("---")
+//	}
+//}
+//
+//// extractFileInfo 提取文件的详细信息
+//func extractFileInfo(input string) FileInfo {
+//	info := FileInfo{
+//		FullName: input,
+//	}
+//
+//	// 提取扩展名
+//	if idx := strings.LastIndex(input, "."); idx != -1 {
+//		info.Ext = input[idx:]
+//	}
+//
+//	// 使用正则表达式匹配日期（支持多种格式）
+//	datePatterns := []string{
+//		`(\d{1,2}\.\d{1,2})`,      // 8.1, 12.25
+//		`(\d{1,2}-\d{1,2})`,       // 8-1, 12-25
+//		`(\d{4}\.\d{1,2}\.\d{1,2})`, // 2023.8.1
+//	}
+//
+//	var date string
+//	for _, pattern := range datePatterns {
+//		re := regexp.MustCompile(pattern)
+//		if matches := re.FindStringSubmatch(input); len(matches) > 0 {
+//			date = matches[0]
+//			break
+//		}
+//	}
+//
+//	info.Date = date
+//
+//	// 提取文件名
+//	if date != "" {
+//		// 移除日期部分
+//		filenamePart := strings.Replace(input, date, "", 1)
+//		// 清理空白字符
+//		filenamePart = strings.TrimSpace(filenamePart)
+//		// 移除扩展名
+//		if info.Ext != "" {
+//			filenamePart = strings.TrimSuffix(filenamePart, info.Ext)
+//		}
+//		info.Filename = filenamePart
+//	} else {
+//		// 没有日期的情况
+//		if info.Ext != "" {
+//			info.Filename = strings.TrimSuffix(input, info.Ext)
+//		} else {
+//			info.Filename = input
+//		}
+//	}
+//
+//	return info
+//}
+		//sort.Slice(excelData, func(i, j int) bool {
+		//	date1, _ := date_tool.ParseSpecialForDate(excelData[i].Date, yearName)
+		//	date2, _ := date_tool.ParseSpecialForDate(excelData[j].Date, yearName)
+		//	return date1.Before(date2)
+		//})
