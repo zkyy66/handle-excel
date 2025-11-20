@@ -19,9 +19,7 @@ func main() {
 func listOfContents() {
 	//目录路径
 	cataloguePath := []string{
-		"D:/workSpace/数据汇总/23年报关数据汇总",
-		"D:/workSpace/数据汇总/24年报关数据汇总",
-		"D:/workSpace/数据汇总/25年报关数据汇总",
+		"xxxx","xxxx","xxxx",
 	}
 	//var files []string
 	//var yearName string
